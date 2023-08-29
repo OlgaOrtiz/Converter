@@ -1,0 +1,22 @@
+{
+  "name": "converter",
+  "version": "1.0.0",
+  "description": "This is a learning orientated project where I have unified my knowledge of HTML, CSS and Javascript into one single simple web application.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OlgaOrtiz/Converter.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OlgaOrtiz/Converter/issues"
+  },
+  "homepage": "https://github.com/OlgaOrtiz/Converter#readme",
+  "dependencies": {
+    "animate.css": "^4.1.1"
+  }
+}

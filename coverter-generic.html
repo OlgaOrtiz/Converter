@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>Converter</title>
-<link href="css/general.css" rel="general" type="text/css">
+<link href="css/general.css" rel="stylesheet" type="text/css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -12,8 +12,30 @@
         <h1>CONVERTER</h1>
         <div id="converter">
             <div class="bg">
-                <div class="flex">
-                    
+                <div class="flex line">
+                    <input type="text" id="convertible">
+                    <p id="measure"></p>
+                </div>
+            </div>
+            <div class="bg-transparent flex">
+                <div>
+                    <p>FROM</p>
+                    <div class="bg">
+                        <select name="measures" class="selector">
+                            <option value="pounds">lb</option>
+                            <option value="kilos">kg</option>
+                          </select>
+                    </div>
+                </div>
+                <div><img src="img/Arrow.png" alt="Arrow"></div>
+                <div>
+                    <p>TO</p>
+                    <div class="bg">
+                        <select name="measures" class="selector">
+                            <option value="pounds">lb</option>
+                            <option value="kilos">kg</option>
+                          </select>
+                    </div>
                 </div>
             </div>
         </div>

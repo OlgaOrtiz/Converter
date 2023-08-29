@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body{
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(../img/Fondo.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+main{
+    align-items: center;
+    margin: auto;
+    width: 70%;
+    text-align: center;
+}
+
+h1{
+    font-size: 50pt;
+    font-weight: 600;
+    color: #f77f00;
+    margin-top: 0;
+    padding-top: 5%;
+}
+
+
+/* Styles converter */
+#converter{
+    width: 70%;
+    max-width: 600px;
+    padding: 15%;
+}
+
+.bg{
+    background-color: #edf6f9;
+    border-radius: 30;
+    mix-blend-mode: soft-light;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+}

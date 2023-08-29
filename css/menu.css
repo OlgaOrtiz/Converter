@@ -1,0 +1,74 @@
+@charset "UTF-8";
+
+#menu{
+    background-color: #edf6f9;
+    border-radius: 15%;
+    mix-blend-mode: soft-light;
+    opacity: 45% ;
+    width: 310px;
+    height: 290px;
+    max-width: 600px;
+    margin: auto;
+    padding: 15%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.main-menu-row{
+    background-color: #83c5be;
+    border-radius: 15%;
+    padding: 10px;
+    margin: 30px;
+    max-height: 80px;
+    width: 90px;
+}
+
+.main-menu-row:hover{
+    background-color: #002529;
+}
+
+.main-menu-row img{
+    max-height: 80px;
+}
+
+#weigth{
+    background-image: url(../img/Icon_Weigth.png);
+    height: 80px;
+}
+
+#weigth:hover{
+    background-image: url(../img/Icon\ Hover_Weigth.png);
+    height: 80px;
+}
+
+#coin{
+    background-image: url(../img/Icon_Coin.png);
+    background-size: 80px;
+}
+
+#coin:hover{
+    background-image: url(../img/Icon\ Hover_Coin.png);
+    height: 80px;
+}
+
+#length{
+    background-image: url(../img/Icon_Length.png);
+    height: 80px;
+}
+
+#length:hover{
+    background-image: url(../img/Icon\ Hover_Length.png);
+    height: 80px;
+}
+
+#temperature{
+    background-image: url(../img/Icon_Temperature.png);
+    height: 80px;
+}
+
+#temperature:hover{
+    background-image: url(../img/Icon\ Hover_Temperature.png);
+    height: 80px;
+}

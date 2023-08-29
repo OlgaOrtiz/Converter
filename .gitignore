@@ -1,1 +1,5 @@
-node_modules
+# Dependencies directories
+node_modules/ 
+
+# Illustrator file
+Converter_Estatico.ai

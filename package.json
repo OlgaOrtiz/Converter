@@ -1,7 +1,7 @@
 {
   "name": "converter",
   "version": "1.0.0",
-  "description": "Personal project of a unit converter",
+  "description": "This is a learning orientated project where I have unified my knowledge of HTML, CSS and Javascript into one single simple web application.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/OlgaOrtiz/Converter.git"
   },
-  "author": "Olga Ortiz",
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/OlgaOrtiz/Converter/issues"

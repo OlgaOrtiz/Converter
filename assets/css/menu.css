@@ -23,52 +23,55 @@
     margin: 30px;
     max-height: 80px;
     width: 90px;
+    opacity: 100%;
+    cursor: pointer;
 }
 
 .main-menu-row:hover{
     background-color: #002529;
+    opacity: 100%;
+}
+
+.main-menu-row svg{
+    max-height: 80px;
+    opacity: 100%;
 }
 
 .main-menu-row img{
     max-height: 80px;
+    opacity: 100%;
 }
 
 #weigth{
-    background-image: url(../img/Icon_Weigth.png);
-    height: 80px;
+    fill: #002529;
+    opacity: 100%;
 }
 
 #weigth:hover{
-    background-image: url(../img/Icon\ Hover_Weigth.png);
-    height: 80px;
+    fill: #F77F00;
+    opacity: 100%;
 }
 
 #coin{
-    background-image: url(../img/Icon_Coin.png);
-    background-size: 80px;
+    fill: #002529;
 }
 
 #coin:hover{
-    background-image: url(../img/Icon\ Hover_Coin.png);
-    height: 80px;
+    fill: #F77F00;
 }
 
 #length{
-    background-image: url(../img/Icon_Length.png);
-    height: 80px;
+    fill: #002529;
 }
 
 #length:hover{
-    background-image: url(../img/Icon\ Hover_Length.png);
-    height: 80px;
+    fill: #F77F00;
 }
 
 #temperature{
-    background-image: url(../img/Icon_Temperature.png);
-    height: 80px;
+    fill: #002529;
 }
 
 #temperature:hover{
-    background-image: url(../img/Icon\ Hover_Temperature.png);
-    height: 80px;
+    fill: #F77F00;
 }

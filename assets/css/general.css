@@ -45,14 +45,36 @@ h1{
 
 .bg{
     min-height: 45px;
+    width: 100%;
     border-radius: 15%;
     background-color: #edf6f9;
     mix-blend-mode: soft-light;
-    opacity: 45% ;
+    /*opacity: 45%;*/
     display: flex;
     justify-content: center;
     align-content: center;
+    color: #;
 }
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+.line{
+    width: 80%;
+    margin: auto;
+    height: 40px;
+    border-bottom: #fff solid 2px;
+}
+
+#convertible{
+    border: none;
+    background: none;
+    height: 35px;
+}
+
+#input{}
 
 .bg-transparent{
     min-height: 45px;
@@ -62,31 +84,59 @@ h1{
     align-items: center;
 }
 
-.flex{
+
+.bg-selector{
+    min-height: 45px;
+    min-width: 45px;
+    border-radius: 15%;
+    background-color: #edf6f9;
+    mix-blend-mode: soft-light;
+    /*opacity: 45%;*/
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-content: center;
 }
 
-.line{
-    border-bottom: #f77f00 1px;
-}
+#from{}
 
 .selector{
     border: none;
     font-family: 'Raleway', sans-serif;
-    border-radius: 15%;
+    /*border-radius: 15%;*/
 }
 
-#convertible{
-    border: none;
-    background: none;
-    height: 35px;
+.pointer:hover{
+    cursor: pointer;
 }
+
+/*.value{
+    min-height: 45px;
+}*/
 
 #arrow{
     width: 10%;
 }
 
-/*#measure{
+#to{}
 
-}*/
+#button{
+    width: 65%;
+    height: 45px;
+    margin: auto;
+    border-radius: 15%;
+    background-color: #edf6f9;
+    mix-blend-mode: soft-light;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button{
+    color: #f77f00;
+    font-weight: 600;
+
+}
+
+#result{}
+
+#output{}

@@ -14,34 +14,41 @@
             <div class="bg">
                 <div class="flex line">
                     <input type="text" id="convertible">
-                    <p id="measure"></p>
+                    <p id="input"></p>
                 </div>
             </div>
             <div class="bg-transparent flex">
                 <div>
                     <p>FROM</p>
-                    <div class="bg">
-                        <select name="measures" class="selector">
-                            <option value="pounds">lb</option>
-                            <option value="kilos">kg</option>
-                            <option value="toneladas">t</option>
+                    <div class="bg-selector">
+                        <select name="measures" class="selector pointer" id="from">
+                            <option class="value" value="lb">lb</option>
+                            <option class="value" value="kg">kg</option>
+                            <option class="value" value="t">t</option>
                           </select>
                     </div>
                 </div>
-                <div><img id="arrow" src="assets/img/Arrow.png"></div>
+                <div><img id="arrow" class="pointer" src="assets/img/Arrow.png"></div>
                 <div>
                     <p>TO</p>
-                    <div class="bg">
-                        <select name="measures" class="selector">
-                            <option value="pounds">lb</option>
-                            <option value="kilos">kg</option>
-                            <option value="kilos">t</option>
+                    <div class="bg-selector">
+                        <select name="measures" class="selector pointer" id="to">
+                            <option class="value" value="lb">lb</option>
+                            <option class="value" value="kg">kg</option>
+                            <option class="value" value="t">t</option>
                           </select>
                     </div>
                 </div>
             </div>
+            <div id="button" class="pointer">
+                <p class="button">CONVERT</p>
+            </div>
+            <div class="flex line">
+                <p id="result"></p>
+                <p id="output"></p>
+            </div>
         </div>
    </main>
-   <script src="js/"></script>
+   <script src="assets/js/converter.js"></script>
 </body>
 </html>

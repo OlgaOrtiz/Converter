@@ -4,6 +4,7 @@
 
 body{
     font-family: 'Raleway', sans-serif;
+    color: #fff;
     margin: 0;
     padding: 0;
     background-image: url(../img/Fondo.jpg);
@@ -58,6 +59,7 @@ h1{
     display: flex;
     justify-content: center;
     align-content: center;
+    align-items: center;
 }
 
 .flex{
@@ -72,12 +74,17 @@ h1{
 .selector{
     border: none;
     font-family: 'Raleway', sans-serif;
+    border-radius: 15%;
 }
 
 #convertible{
     border: none;
     background: none;
     height: 35px;
+}
+
+#arrow{
+    width: 10%;
 }
 
 /*#measure{

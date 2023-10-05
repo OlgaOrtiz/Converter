@@ -7,56 +7,46 @@
 
 
 const convertibleMeasure = document.querySelector("#convertible");
-//this is a p element, not the input
+// this is the text of the input measurement in a p element
 const inputMeasurment = document.querySelector("#input");
 // this is our FROM dropdown
 const fromMeasurement = document.querySelector("#from");
-// why we need to get the img element into JS?
+// why we need to get the img element into JS? Because if you click it the measures of "from" and "to" change
 const arrow = document.querySelector("#arrow");
 // this is our TO dropdown
 const toMeasurement = document.querySelector("#to");
-//this is the conversion button
+// this is the conversion button
 const convertButton = document.querySelector("#button");
-//this is the result output
+// this is the result output
 const resultMeasure = document.querySelector("#result");
-
+// this is the text of the output measurement in a p element
 const outputMeasurement = document.querySelector("#output");
+// this is the temporary element for the arrow change
+const tempMeasure = [];
 
+// this is default value for the input and output measurements
 inputMeasurment.textContent = fromMeasurement.value;
 outputMeasurement.textContent = toMeasurement.value;
 
-//If you want to execute the convertion logic by click the arrow, then there's no needs to have the button
-//you either use the button or the arrow
-//I would use the button for doing to convertion logic, and only use the arrow to improve user experience
-arrow.addEventListener("click", changeMeasurements);
 
-//this is the From dropdown event listener, you are changing the dropdown selection, not the input value
-// the changeInput function should not be assigned to this event listener
-fromMeasurement.addEventListener("change", changeInput);
+arrow.addEventListener("click", function changeMeasurements(){
+    tempMeasure.value = fromMeasurement.value;
+    fromMeasurement.value = toMeasurement.value;
+    inputMeasurment.textContent = fromMeasurement.value;
+    toMeasurement.value = tempMeasure.value;
+    outputMeasurement.textContent = toMeasurement.value;
+
+});
+
+fromMeasurement.addEventListener("change", function changeInput(){
+    inputMeasurment.textContent = fromMeasurement.value;
+});
 
 //this is the To dropdown event listener, same reason as above
-toMeasurement.addEventListener("change", changeOutput);
+toMeasurement.addEventListener("change", function changeOutput(){
+    outputMeasurement.textContent = toMeasurement.value;
+});
 
-
-function changeMeasurements (){
-    /*const tempMeasure = fromMeasurement.value;
-    fromMeasurement.value = inputMeasurment.value;*/
-
-}
-
-function changeInput (){
-    //example of debugging with console.log :)
-    console.log('I am in the change input');
-    inputMeasurment.textContent = fromMeasurement.target.value;
-}
-
-function changeOutput (){
-    debugger;
-    console.log(changeOutput.target.value);
-    outputMeasurement.replaceChild(value, changeOutput.target.value);
-    /*outputMeasurement.textContent = "${event.target.value}";*/
-}
-
-function convert (){
+convertButton.addEventListener("click", function convert (){
     
-}
+})

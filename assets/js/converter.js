@@ -11,7 +11,7 @@ const convertibleMeasure = document.querySelector("#convertible");
 const inputMeasurment = document.querySelector("#input");
 // this is our FROM dropdown
 const fromMeasurement = document.querySelector("#from");
-// why we need to get the img element into JS? Because if you click it the measures of "from" and "to" change
+// this is the element to change the measures of "from" and "to" between them
 const arrow = document.querySelector("#arrow");
 // this is our TO dropdown
 const toMeasurement = document.querySelector("#to");
@@ -47,6 +47,42 @@ toMeasurement.addEventListener("change", function changeOutput(){
     outputMeasurement.textContent = toMeasurement.value;
 });
 
-convertButton.addEventListener("click", function convert (){
-    
+convertButton.addEventListener("click", function convert(){
+    if (inputMeasurment.textContent == "lb" && outputMeasurement.textContent == "kg"){
+        resultMeasure.textContent = parseInt(convertibleMeasure.value) * 0.4535;
+    } else if (inputMeasurment.textContent == "lb" && outputMeasurement.textContent == "t"){
+        resultMeasure.textContent = parseInt(convertibleMeasure.value) * 0.0004;
+    } else if (inputMeasurment.textContent == "kg" && outputMeasurement.textContent == "lb"){
+        resultMeasure.textContent = parseInt(convertibleMeasure.value) * 2.2046;
+    } else if (inputMeasurment.textContent == "kg" && outputMeasurement.textContent == "t"){
+        resultMeasure.textContent = parseInt(convertibleMeasure.value) / 1000;
+    } else if (inputMeasurment.textContent == "t" && outputMeasurement.textContent == "kg"){
+        resultMeasure.textContent = parseInt(convertibleMeasure.value) * 1000;
+    } else if (inputMeasurment.textContent == "t" && outputMeasurement.textContent == "lb"){
+        resultMeasure.textContent = parseInt(convertibleMeasure.value) * 2204.6226;
+    } else if (inputMeasurment.textContent == "m" && outputMeasurement.textContent == "ft"){
+        resultMeasure.textContent = parseInt(convertibleMeasure.value) * 3.2808;
+    } else if (inputMeasurment.textContent == "m" && outputMeasurement.textContent == "yd"){
+        resultMeasure.textContent = parseInt(convertibleMeasure.value) * 1.0936;
+    } else if (inputMeasurment.textContent == "ft" && outputMeasurement.textContent == "m"){
+        resultMeasure.textContent = parseInt(convertibleMeasure.value) * 0.3048;
+    } else if (inputMeasurment.textContent == "ft" && outputMeasurement.textContent == "yd"){
+        resultMeasure.textContent = parseInt(convertibleMeasure.value) * 0.3333;
+    } else if (inputMeasurment.textContent == "yd" && outputMeasurement.textContent == "m"){
+        resultMeasure.textContent = parseInt(convertibleMeasure.value) * 0.9144;
+    } else if (inputMeasurment.textContent == "yd" && outputMeasurement.textContent == "ft"){
+        resultMeasure.textContent = parseInt(convertibleMeasure.value) * 3;
+    } else if (inputMeasurment.textContent == "C" && outputMeasurement.textContent == "F"){
+        resultMeasure.textContent = (parseInt(convertibleMeasure.value) * 9 / 5) + 32 ;
+    } else if (inputMeasurment.textContent == "C" && outputMeasurement.textContent == "K"){
+        resultMeasure.textContent = parseInt(convertibleMeasure.value) + 273.15;
+    } else if (inputMeasurment.textContent == "F" && outputMeasurement.textContent == "C"){
+        resultMeasure.textContent = (parseInt(convertibleMeasure.value) - 32) * 5 / 9;
+    } else if (inputMeasurment.textContent == "F" && outputMeasurement.textContent == "K"){
+        resultMeasure.textContent = (parseInt(convertibleMeasure.value) - 32) * 5 / 9 + 273.15;
+    } else if (inputMeasurment.textContent == "K" && outputMeasurement.textContent == "C"){
+        resultMeasure.textContent = parseInt(convertibleMeasure.value) - 273.15;
+    } else if (inputMeasurment.textContent == "K" && outputMeasurement.textContent == "F"){
+        resultMeasure.textContent = (parseInt(convertibleMeasure.value) - 273.15) * 9 / 5 + 32;
+    }
 })

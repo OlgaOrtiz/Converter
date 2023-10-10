@@ -8,7 +8,7 @@
 
 const convertibleMeasure = document.querySelector("#convertible");
 // this is the text of the input measurement in a p element
-const inputMeasurment = document.querySelector("#input");
+const inputMeasurement = document.querySelector("#input");
 // this is our FROM dropdown
 const fromMeasurement = document.querySelector("#from");
 // this is the element to change the measures of "from" and "to" between them
@@ -25,21 +25,21 @@ const outputMeasurement = document.querySelector("#output");
 const tempMeasure = [];
 
 // this is default value for the input and output measurements
-inputMeasurment.textContent = fromMeasurement.value;
+inputMeasurement.textContent = fromMeasurement.value;
 outputMeasurement.textContent = toMeasurement.value;
 
 
 arrow.addEventListener("click", function changeMeasurements(){
     tempMeasure.value = fromMeasurement.value;
     fromMeasurement.value = toMeasurement.value;
-    inputMeasurment.textContent = fromMeasurement.value;
+    inputMeasurement.textContent = fromMeasurement.value;
     toMeasurement.value = tempMeasure.value;
     outputMeasurement.textContent = toMeasurement.value;
 
 });
 
 fromMeasurement.addEventListener("change", function changeInput(){
-    inputMeasurment.textContent = fromMeasurement.value;
+    inputMeasurement.textContent = fromMeasurement.value;
 });
 
 //this is the To dropdown event listener, same reason as above
@@ -48,41 +48,41 @@ toMeasurement.addEventListener("change", function changeOutput(){
 });
 
 convertButton.addEventListener("click", function convert(){
-    if (inputMeasurment.textContent == "lb" && outputMeasurement.textContent == "kg"){
+    if (inputMeasurement.textContent == "lb" && outputMeasurement.textContent == "kg"){
         resultMeasure.textContent = parseInt(convertibleMeasure.value) * 0.4535;
-    } else if (inputMeasurment.textContent == "lb" && outputMeasurement.textContent == "t"){
+    } else if (inputMeasurement.textContent == "lb" && outputMeasurement.textContent == "t"){
         resultMeasure.textContent = parseInt(convertibleMeasure.value) * 0.0004;
-    } else if (inputMeasurment.textContent == "kg" && outputMeasurement.textContent == "lb"){
+    } else if (inputMeasurement.textContent == "kg" && outputMeasurement.textContent == "lb"){
         resultMeasure.textContent = parseInt(convertibleMeasure.value) * 2.2046;
-    } else if (inputMeasurment.textContent == "kg" && outputMeasurement.textContent == "t"){
+    } else if (inputMeasurement.textContent == "kg" && outputMeasurement.textContent == "t"){
         resultMeasure.textContent = parseInt(convertibleMeasure.value) / 1000;
-    } else if (inputMeasurment.textContent == "t" && outputMeasurement.textContent == "kg"){
+    } else if (inputMeasurement.textContent == "t" && outputMeasurement.textContent == "kg"){
         resultMeasure.textContent = parseInt(convertibleMeasure.value) * 1000;
-    } else if (inputMeasurment.textContent == "t" && outputMeasurement.textContent == "lb"){
+    } else if (inputMeasurement.textContent == "t" && outputMeasurement.textContent == "lb"){
         resultMeasure.textContent = parseInt(convertibleMeasure.value) * 2204.6226;
-    } else if (inputMeasurment.textContent == "m" && outputMeasurement.textContent == "ft"){
+    } else if (inputMeasurement.textContent == "m" && outputMeasurement.textContent == "ft"){
         resultMeasure.textContent = parseInt(convertibleMeasure.value) * 3.2808;
-    } else if (inputMeasurment.textContent == "m" && outputMeasurement.textContent == "yd"){
+    } else if (inputMeasurement.textContent == "m" && outputMeasurement.textContent == "yd"){
         resultMeasure.textContent = parseInt(convertibleMeasure.value) * 1.0936;
-    } else if (inputMeasurment.textContent == "ft" && outputMeasurement.textContent == "m"){
+    } else if (inputMeasurement.textContent == "ft" && outputMeasurement.textContent == "m"){
         resultMeasure.textContent = parseInt(convertibleMeasure.value) * 0.3048;
-    } else if (inputMeasurment.textContent == "ft" && outputMeasurement.textContent == "yd"){
+    } else if (inputMeasurement.textContent == "ft" && outputMeasurement.textContent == "yd"){
         resultMeasure.textContent = parseInt(convertibleMeasure.value) * 0.3333;
-    } else if (inputMeasurment.textContent == "yd" && outputMeasurement.textContent == "m"){
+    } else if (inputMeasurement.textContent == "yd" && outputMeasurement.textContent == "m"){
         resultMeasure.textContent = parseInt(convertibleMeasure.value) * 0.9144;
-    } else if (inputMeasurment.textContent == "yd" && outputMeasurement.textContent == "ft"){
+    } else if (inputMeasurement.textContent == "yd" && outputMeasurement.textContent == "ft"){
         resultMeasure.textContent = parseInt(convertibleMeasure.value) * 3;
-    } else if (inputMeasurment.textContent == "C" && outputMeasurement.textContent == "F"){
+    } else if (inputMeasurement.textContent == "C" && outputMeasurement.textContent == "F"){
         resultMeasure.textContent = (parseInt(convertibleMeasure.value) * 9 / 5) + 32 ;
-    } else if (inputMeasurment.textContent == "C" && outputMeasurement.textContent == "K"){
+    } else if (inputMeasurement.textContent == "C" && outputMeasurement.textContent == "K"){
         resultMeasure.textContent = parseInt(convertibleMeasure.value) + 273.15;
-    } else if (inputMeasurment.textContent == "F" && outputMeasurement.textContent == "C"){
+    } else if (inputMeasurement.textContent == "F" && outputMeasurement.textContent == "C"){
         resultMeasure.textContent = (parseInt(convertibleMeasure.value) - 32) * 5 / 9;
-    } else if (inputMeasurment.textContent == "F" && outputMeasurement.textContent == "K"){
+    } else if (inputMeasurement.textContent == "F" && outputMeasurement.textContent == "K"){
         resultMeasure.textContent = (parseInt(convertibleMeasure.value) - 32) * 5 / 9 + 273.15;
-    } else if (inputMeasurment.textContent == "K" && outputMeasurement.textContent == "C"){
+    } else if (inputMeasurement.textContent == "K" && outputMeasurement.textContent == "C"){
         resultMeasure.textContent = parseInt(convertibleMeasure.value) - 273.15;
-    } else if (inputMeasurment.textContent == "K" && outputMeasurement.textContent == "F"){
+    } else if (inputMeasurement.textContent == "K" && outputMeasurement.textContent == "F"){
         resultMeasure.textContent = (parseInt(convertibleMeasure.value) - 273.15) * 9 / 5 + 32;
     }
 })

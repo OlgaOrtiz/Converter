@@ -9,7 +9,7 @@ temperature.addEventListener("click", openTemperature);
 
 
 function openWeigth (){
-    window.location.href = "http://localhost:8000/converter-generic.html";
+    window.location.href = "./weight_converter.html";
 }
 
 function openLength (){

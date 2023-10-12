@@ -1,4 +1,5 @@
 import { lbToKilo, lbToTon, kgToPound, kgToTon, tToKilo, tToPound } from './weightConverter.js';
+import { mToFeet, mToYard, ftToMeter, ftToYard, ydToMeter, ydToFeet } from './lengthConverter.js';
 
 const convertibleMeasure = document.querySelector("#convertible");
 // this is the text of the input measurement in a p element
@@ -65,6 +66,34 @@ convertButton.addEventListener("click", function convert(){
                 resultMeasure.textContent = tToKilo(convertibleMeasure.value);
             } else if (toMeasurement.value === 'lb') {
                 resultMeasure.textContent = tToPound(convertibleMeasure.value);
+            }
+            break;
+        }
+
+        // LENGTH CASES 
+        case 'm': {
+            if(toMeasurement.value === 'ft') {
+                resultMeasure.textContent = mToFeet(convertibleMeasure.value);
+            } else if (toMeasurement.value === 'yd') {
+                resultMeasure.textContent = mToYard(convertibleMeasure.value);
+            }
+            break;
+        }
+
+        case 'ft': {
+            if(toMeasurement.value === 'm') {
+                resultMeasure.textContent = ftToMeter(convertibleMeasure.value);
+            } else if (toMeasurement.value === 'yd') {
+                resultMeasure.textContent = ftToYard(convertibleMeasure.value);
+            }
+            break;
+        }
+
+        case 'yd': {
+            if(toMeasurement.value === 'm') {
+                resultMeasure.textContent = ydToMeter(convertibleMeasure.value);
+            } else if (toMeasurement.value === 'ft') {
+                resultMeasure.textContent = ydToFeet(convertibleMeasure.value);
             }
             break;
         }

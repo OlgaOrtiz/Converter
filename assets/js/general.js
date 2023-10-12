@@ -13,13 +13,13 @@ function openWeigth (){
 }
 
 function openLength (){
-    window.location.href = "http://localhost:8000/converter-generic.html";
+    window.location.href = "./length_converter.html";
 }
 
 function openCoin (){
-    window.location.href = "http://localhost:8000/converter-generic.html";
+    window.location.href = "./coin_converter.html";
 }
 
 function openTemperature (){
-    window.location.href = "http://localhost:8000/converter-generic.html";
+    window.location.href = "./temperature_converter.html";
 }

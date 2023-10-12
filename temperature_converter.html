@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Converter</title>
+<link href="assets/css/general.css" rel="stylesheet" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+   <main>
+        <h1>OLGA'S CONVERTER</h1>
+        <div id="converter">
+            <div class="bg">
+                <div class="flex line-dark">
+                    <input type="text" id="convertible">
+                    <p id="input"></p>
+                </div>
+            </div>
+            <div class="bg-transparent flex">
+                <div>
+                    <p>FROM</p>
+                    <div class="bg-selector">
+                        <select name="measures" class="selector pointer" id="from">
+                            <option class="value" value="C">C</option>
+                            <option class="value" value="F">F</option>
+                            <option class="value" value="K">K</option>
+                          </select>
+                    </div>
+                </div>
+                <div><img id="arrow" class="pointer" src="assets/img/Arrow.png"></div>
+                <div>
+                    <p>TO</p>
+                    <div class="bg-selector">
+                        <select name="measures" class="selector pointer" id="to">
+                            <option class="value" value="C">C</option>
+                            <option class="value" value="F">F</option>
+                            <option class="value" value="K">K</option>
+                          </select>
+                    </div>
+                </div>
+            </div>
+            <div id="button" class="pointer">
+                <p class="button">CONVERT</p>
+            </div>
+            <div class="flex line-light">
+                <p id="result"></p>
+                <p id="output"></p>
+            </div>
+        </div>
+   </main>
+   <script src="assets/js/converter.js"></script>
+</body>
+</html>

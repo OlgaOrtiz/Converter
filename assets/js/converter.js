@@ -1,9 +1,5 @@
 import { lbToKilo, lbToTon, kgToPound, kgToTon, tToKilo, tToPound } from './weightConverter.js';
 
-//Well naming convention for variable names and function names :)
-//Nice try using the debugger
-
-
 const convertibleMeasure = document.querySelector("#convertible");
 // this is the text of the input measurement in a p element
 const inputMeasurement = document.querySelector("#input");
@@ -49,26 +45,26 @@ convertButton.addEventListener("click", function convert(){
     switch(fromMeasurement.value) {
         case 'lb': {
             if(toMeasurement.value === 'kg') {
-                resultMeasure.textContent = lbToKilo(convertible.value);
+                resultMeasure.textContent = lbToKilo(convertibleMeasure.value);
             } else if (toMeasurement.value === 't') {
-                resultMeasure.textContent = lbToTon(convertible.value);
+                resultMeasure.textContent = lbToTon(convertibleMeasure.value);
             }
             break;
         }
         case 'kg': {
             if(toMeasurement.value === 'lb') {
-                resultMeasure.textContent = kgToPound(convertible.value);
+                resultMeasure.textContent = kgToPound(convertibleMeasure.value);
             } else if (toMeasurement.value === 't') {
-                resultMeasure.textContent = kgToTon(convertible.value);
+                resultMeasure.textContent = kgToTon(convertibleMeasure.value);
             }
             break;
         }
 
         case 't': {
             if(toMeasurement.value === 'kg') {
-                resultMeasure.textContent = tToKilo(convertible.value);
+                resultMeasure.textContent = tToKilo(convertibleMeasure.value);
             } else if (toMeasurement.value === 'lb') {
-                resultMeasure.textContent = tToPound(convertible.value);
+                resultMeasure.textContent = tToPound(convertibleMeasure.value);
             }
             break;
         }

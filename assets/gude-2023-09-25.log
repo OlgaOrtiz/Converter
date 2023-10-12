@@ -1,0 +1,12 @@
+09:52:00:625 [ALWAYS]	GUDE Logging Started
+09:52:00:636 [INFO]	gude policy POLICY_USER limit (4,4,1) chunk 2097152, chunking (UL 0 DL 1), resXfer 1, adapt 0, NSURL 1, timeout 86400 
+09:52:00:636 [INFO]	Initialized -- gude-lib version: v0.10.4 app: gude
+09:52:02:689 [WARN]	Request Failed. ErrorCode: 112007 errorMessage: Platform Status, Send Request Failed. WinHTTP Name Not Resolved. last error code = 12007 
+09:52:04:693 [WARN]	Request Failed. ErrorCode: 112007 errorMessage: Platform Status, Send Request Failed. WinHTTP Name Not Resolved. last error code = 12007 
+09:52:10:701 [WARN]	Request Failed. ErrorCode: 112007 errorMessage: Platform Status, Send Request Failed. WinHTTP Name Not Resolved. last error code = 12007 
+09:52:22:724 [WARN]	Request Failed. ErrorCode: 112007 errorMessage: Platform Status, Send Request Failed. WinHTTP Name Not Resolved. last error code = 12007 
+09:52:30:729 [WARN]	Request Failed. ErrorCode: 112007 errorMessage: Platform Status, Send Request Failed. WinHTTP Name Not Resolved. last error code = 12007 
+09:52:32:738 [WARN]	Request Failed. ErrorCode: 112007 errorMessage: Platform Status, Send Request Failed. WinHTTP Name Not Resolved. last error code = 12007 
+09:52:56:750 [WARN]	Request Failed. ErrorCode: 112007 errorMessage: Platform Status, Send Request Failed. WinHTTP Name Not Resolved. last error code = 12007 
+09:53:46:199 [WARN]	Request Failed. ErrorCode: 112007 errorMessage: Platform Status, Send Request Failed. WinHTTP Name Not Resolved. last error code = 12007 
+09:54:24:244 [WARN]	Request Failed. ErrorCode: 112007 errorMessage: Platform Status, Send Request Failed. WinHTTP Name Not Resolved. last error code = 12007 

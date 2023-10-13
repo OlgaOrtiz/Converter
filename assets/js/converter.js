@@ -1,5 +1,7 @@
 import { lbToKilo, lbToTon, kgToPound, kgToTon, tToKilo, tToPound } from './weightConverter.js';
 import { mToFeet, mToYard, ftToMeter, ftToYard, ydToMeter, ydToFeet } from './lengthConverter.js';
+import { CToFahrenheit, CToKelvin, FToCelcius, FToKelvin, KToCelcius, KToFahrenheit } from './temperatureConverter.js';
+
 
 const convertibleMeasure = document.querySelector("#convertible");
 // this is the text of the input measurement in a p element
@@ -44,6 +46,7 @@ toMeasurement.addEventListener("change", function changeOutput(){
 convertButton.addEventListener("click", function convert(){
 
     switch(fromMeasurement.value) {
+        // WEIGHT CASES
         case 'lb': {
             if(toMeasurement.value === 'kg') {
                 resultMeasure.textContent = lbToKilo(convertibleMeasure.value);
@@ -94,6 +97,34 @@ convertButton.addEventListener("click", function convert(){
                 resultMeasure.textContent = ydToMeter(convertibleMeasure.value);
             } else if (toMeasurement.value === 'ft') {
                 resultMeasure.textContent = ydToFeet(convertibleMeasure.value);
+            }
+            break;
+        }
+
+        // TEMPERATURE CASES
+        case 'ºC': {
+            if(toMeasurement.value === 'ºF') {
+                resultMeasure.textContent = CToFahrenheit(convertibleMeasure.value);
+            } else if (toMeasurement.value === 'ºK') {
+                resultMeasure.textContent = CToKelvin(convertibleMeasure.value);
+            }
+            break;
+        }
+
+        case 'ºF': {
+            if(toMeasurement.value === 'ºC') {
+                resultMeasure.textContent = FToCelcius(convertibleMeasure.value);
+            } else if (toMeasurement.value === 'ºK') {
+                resultMeasure.textContent = FToKelvin(convertibleMeasure.value);
+            }
+            break;
+        }
+
+        case 'ºK': {
+            if(toMeasurement.value === 'ºC') {
+                resultMeasure.textContent = KToCelcius(convertibleMeasure.value);
+            } else if (toMeasurement.value === 'ºF') {
+                resultMeasure.textContent = KToFahrenheit(convertibleMeasure.value);
             }
             break;
         }

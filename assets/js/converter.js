@@ -1,8 +1,6 @@
 import { lbToKilo, lbToTon, kgToPound, kgToTon, tToKilo, tToPound } from './weightConverter.js';
 import { mToFeet, mToYard, ftToMeter, ftToYard, ydToMeter, ydToFeet } from './lengthConverter.js';
 import { CToFahrenheit, CToKelvin, FToCelcius, FToKelvin, KToCelcius, KToFahrenheit } from './temperatureConverter.js';
-// import { checkValidation } from './validation.js';
-
 
 const convertibleMeasure = document.querySelector("#convertible");
 // this is the text of the input measurement in a p element
@@ -132,51 +130,9 @@ convertButton.addEventListener("click", function convert(){
                 break;
             }
     
-            //todo: complete the switch with all other units....
-    
             default: {
                 console.log('Error happened....');
             }
         }
     };
-
-
-
-    // if (inputMeasurement.textContent === "lb" && outputMeasurement.textContent === "kg"){
-    //     resultMeasure.textContent = parseInt(convertibleMeasure.value) * 0.4535;
-    // } else if (inputMeasurement.textContent === "lb" && outputMeasurement.textContent === "t"){
-    //     resultMeasure.textContent = parseInt(convertibleMeasure.value) * 0.0004;
-    // } else if (inputMeasurement.textContent === "kg" && outputMeasurement.textContent === "lb"){
-    //     resultMeasure.textContent = parseInt(convertibleMeasure.value) * 2.2046;
-    // } else if (inputMeasurement.textContent === "kg" && outputMeasurement.textContent === "t"){
-    //     resultMeasure.textContent = parseInt(convertibleMeasure.value) / 1000;
-    // } else if (inputMeasurement.textContent === "t" && outputMeasurement.textContent === "kg"){
-    //     resultMeasure.textContent = parseInt(convertibleMeasure.value) * 1000;
-    // } else if (inputMeasurement.textContent === "t" && outputMeasurement.textContent === "lb"){
-    //     resultMeasure.textContent = parseInt(convertibleMeasure.value) * 2204.6226;
-    // } else if (inputMeasurement.textContent === "m" && outputMeasurement.textContent === "ft"){
-    //     resultMeasure.textContent = parseInt(convertibleMeasure.value) * 3.2808;
-    // } else if (inputMeasurement.textContent === "m" && outputMeasurement.textContent === "yd"){
-    //     resultMeasure.textContent = parseInt(convertibleMeasure.value) * 1.0936;
-    // } else if (inputMeasurement.textContent === "ft" && outputMeasurement.textContent === "m"){
-    //     resultMeasure.textContent = parseInt(convertibleMeasure.value) * 0.3048;
-    // } else if (inputMeasurement.textContent === "ft" && outputMeasurement.textContent === "yd"){
-    //     resultMeasure.textContent = parseInt(convertibleMeasure.value) * 0.3333;
-    // } else if (inputMeasurement.textContent === "yd" && outputMeasurement.textContent === "m"){
-    //     resultMeasure.textContent = parseInt(convertibleMeasure.value) * 0.9144;
-    // } else if (inputMeasurement.textContent === "yd" && outputMeasurement.textContent === "ft"){
-    //     resultMeasure.textContent = parseInt(convertibleMeasure.value) * 3;
-    // } else if (inputMeasurement.textContent === "C" && outputMeasurement.textContent === "F"){
-    //     resultMeasure.textContent = (parseInt(convertibleMeasure.value) * 9 / 5) + 32 ;
-    // } else if (inputMeasurement.textContent === "C" && outputMeasurement.textContent === "K"){
-    //     resultMeasure.textContent = parseInt(convertibleMeasure.value) + 273.15;
-    // } else if (inputMeasurement.textContent === "F" && outputMeasurement.textContent === "C"){
-    //     resultMeasure.textContent = (parseInt(convertibleMeasure.value) - 32) * 5 / 9;
-    // } else if (inputMeasurement.textContent === "F" && outputMeasurement.textContent === "K"){
-    //     resultMeasure.textContent = (parseInt(convertibleMeasure.value) - 32) * 5 / 9 + 273.15;
-    // } else if (inputMeasurement.textContent === "K" && outputMeasurement.textContent === "C"){
-    //     resultMeasure.textContent = parseInt(convertibleMeasure.value) - 273.15;
-    // } else if (inputMeasurement.textContent === "K" && outputMeasurement.textContent === "F"){
-    //     resultMeasure.textContent = (parseInt(convertibleMeasure.value) - 273.15) * 9 / 5 + 32;
-    // }
 })

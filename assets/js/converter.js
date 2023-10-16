@@ -1,6 +1,7 @@
 import { lbToKilo, lbToTon, kgToPound, kgToTon, tToKilo, tToPound } from './weightConverter.js';
 import { mToFeet, mToYard, ftToMeter, ftToYard, ydToMeter, ydToFeet } from './lengthConverter.js';
 import { CToFahrenheit, CToKelvin, FToCelcius, FToKelvin, KToCelcius, KToFahrenheit } from './temperatureConverter.js';
+// import { checkValidation } from './validation.js';
 
 
 const convertibleMeasure = document.querySelector("#convertible");
@@ -44,97 +45,99 @@ toMeasurement.addEventListener("change", function changeOutput(){
 });
 
 convertButton.addEventListener("click", function convert(){
-
-    switch(fromMeasurement.value) {
-        // WEIGHT CASES
-        case 'lb': {
-            if(toMeasurement.value === 'kg') {
-                resultMeasure.textContent = lbToKilo(convertibleMeasure.value);
-            } else if (toMeasurement.value === 't') {
-                resultMeasure.textContent = lbToTon(convertibleMeasure.value);
+    if (isNaN(parseInt(convertibleMeasure.value)) === true){
+        resultMeasure.textContent = "Please, check out you have entered the correct data for the conversion";
+    } else if (isNaN(parseInt(convertibleMeasure.value)) === false) {
+        switch(fromMeasurement.value) {
+            // WEIGHT CASES
+            case 'lb': {
+                if(toMeasurement.value === 'kg') {
+                    resultMeasure.textContent = lbToKilo(convertibleMeasure.value);
+                } else if (toMeasurement.value === 't') {
+                    resultMeasure.textContent = lbToTon(convertibleMeasure.value);
+                }
+                break;
             }
-            break;
-        }
-        case 'kg': {
-            if(toMeasurement.value === 'lb') {
-                resultMeasure.textContent = kgToPound(convertibleMeasure.value);
-            } else if (toMeasurement.value === 't') {
-                resultMeasure.textContent = kgToTon(convertibleMeasure.value);
+            case 'kg': {
+                if(toMeasurement.value === 'lb') {
+                    resultMeasure.textContent = kgToPound(convertibleMeasure.value);
+                } else if (toMeasurement.value === 't') {
+                    resultMeasure.textContent = kgToTon(convertibleMeasure.value);
+                }
+                break;
             }
-            break;
-        }
-
-        case 't': {
-            if(toMeasurement.value === 'kg') {
-                resultMeasure.textContent = tToKilo(convertibleMeasure.value);
-            } else if (toMeasurement.value === 'lb') {
-                resultMeasure.textContent = tToPound(convertibleMeasure.value);
+    
+            case 't': {
+                if(toMeasurement.value === 'kg') {
+                    resultMeasure.textContent = tToKilo(convertibleMeasure.value);
+                } else if (toMeasurement.value === 'lb') {
+                    resultMeasure.textContent = tToPound(convertibleMeasure.value);
+                }
+                break;
             }
-            break;
-        }
-
-        // LENGTH CASES 
-        case 'm': {
-            if(toMeasurement.value === 'ft') {
-                resultMeasure.textContent = mToFeet(convertibleMeasure.value);
-            } else if (toMeasurement.value === 'yd') {
-                resultMeasure.textContent = mToYard(convertibleMeasure.value);
+    
+            // LENGTH CASES 
+            case 'm': {
+                if(toMeasurement.value === 'ft') {
+                    resultMeasure.textContent = mToFeet(convertibleMeasure.value);
+                } else if (toMeasurement.value === 'yd') {
+                    resultMeasure.textContent = mToYard(convertibleMeasure.value);
+                }
+                break;
             }
-            break;
-        }
-
-        case 'ft': {
-            if(toMeasurement.value === 'm') {
-                resultMeasure.textContent = ftToMeter(convertibleMeasure.value);
-            } else if (toMeasurement.value === 'yd') {
-                resultMeasure.textContent = ftToYard(convertibleMeasure.value);
+    
+            case 'ft': {
+                if(toMeasurement.value === 'm') {
+                    resultMeasure.textContent = ftToMeter(convertibleMeasure.value);
+                } else if (toMeasurement.value === 'yd') {
+                    resultMeasure.textContent = ftToYard(convertibleMeasure.value);
+                }
+                break;
             }
-            break;
-        }
-
-        case 'yd': {
-            if(toMeasurement.value === 'm') {
-                resultMeasure.textContent = ydToMeter(convertibleMeasure.value);
-            } else if (toMeasurement.value === 'ft') {
-                resultMeasure.textContent = ydToFeet(convertibleMeasure.value);
+    
+            case 'yd': {
+                if(toMeasurement.value === 'm') {
+                    resultMeasure.textContent = ydToMeter(convertibleMeasure.value);
+                } else if (toMeasurement.value === 'ft') {
+                    resultMeasure.textContent = ydToFeet(convertibleMeasure.value);
+                }
+                break;
             }
-            break;
-        }
-
-        // TEMPERATURE CASES
-        case 'ºC': {
-            if(toMeasurement.value === 'ºF') {
-                resultMeasure.textContent = CToFahrenheit(convertibleMeasure.value);
-            } else if (toMeasurement.value === 'ºK') {
-                resultMeasure.textContent = CToKelvin(convertibleMeasure.value);
+    
+            // TEMPERATURE CASES
+            case 'ºC': {
+                if(toMeasurement.value === 'ºF') {
+                    resultMeasure.textContent = CToFahrenheit(convertibleMeasure.value);
+                } else if (toMeasurement.value === 'ºK') {
+                    resultMeasure.textContent = CToKelvin(convertibleMeasure.value);
+                }
+                break;
             }
-            break;
-        }
-
-        case 'ºF': {
-            if(toMeasurement.value === 'ºC') {
-                resultMeasure.textContent = FToCelcius(convertibleMeasure.value);
-            } else if (toMeasurement.value === 'ºK') {
-                resultMeasure.textContent = FToKelvin(convertibleMeasure.value);
+    
+            case 'ºF': {
+                if(toMeasurement.value === 'ºC') {
+                    resultMeasure.textContent = FToCelcius(convertibleMeasure.value);
+                } else if (toMeasurement.value === 'ºK') {
+                    resultMeasure.textContent = FToKelvin(convertibleMeasure.value);
+                }
+                break;
             }
-            break;
-        }
-
-        case 'ºK': {
-            if(toMeasurement.value === 'ºC') {
-                resultMeasure.textContent = KToCelcius(convertibleMeasure.value);
-            } else if (toMeasurement.value === 'ºF') {
-                resultMeasure.textContent = KToFahrenheit(convertibleMeasure.value);
+    
+            case 'ºK': {
+                if(toMeasurement.value === 'ºC') {
+                    resultMeasure.textContent = KToCelcius(convertibleMeasure.value);
+                } else if (toMeasurement.value === 'ºF') {
+                    resultMeasure.textContent = KToFahrenheit(convertibleMeasure.value);
+                }
+                break;
             }
-            break;
+    
+            //todo: complete the switch with all other units....
+    
+            default: {
+                console.log('Error happened....');
+            }
         }
-
-        //todo: complete the switch with all other units....
-
-        default: {
-            console.log('Error happened....');
-        }
-
     };
 
 

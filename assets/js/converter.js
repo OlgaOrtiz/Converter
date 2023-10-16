@@ -34,7 +34,16 @@ arrow.addEventListener("click", function changeMeasurements(){
 
 });
 
+// set the actual fromM and toM to new variables
+
 fromMeasurement.addEventListener("change", function changeInput(){
+    // delete de disable attribute from the previus toM
+    // get index in select for the new fromM -- fromMeasurement.findIndex(fromMeasurement.value) ERROR
+    // set attribute "disabled" to the toM in the index from the new fromM -- toMeasurement[i].setAttribute ("disabled", "");
+    // inputMeasurement.textContent = fromMeasurement.value;
+    // update the current fromM to the actual variable outside the event
+    
+
     inputMeasurement.textContent = fromMeasurement.value;
 });
 

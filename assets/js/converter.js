@@ -1,7 +1,7 @@
 import { lbToKilo, lbToTon, kgToPound, kgToTon, tToKilo, tToPound } from './weightConverter.js';
 import { mToFeet, mToYard, ftToMeter, ftToYard, ydToMeter, ydToFeet } from './lengthConverter.js';
 import { CToFahrenheit, CToKelvin, FToCelcius, FToKelvin, KToCelcius, KToFahrenheit } from './temperatureConverter.js';
-import { checkValidation } from './validation.js';
+import { isValidInput } from './validation.js';
 
 
 const convertibleMeasure = document.querySelector("#convertible");
@@ -45,37 +45,32 @@ toMeasurement.addEventListener("change", function changeOutput(){
 });
 
 convertButton.addEventListener("click", function convert(){
-    const formattedMeasure = convertibleMeasurement.value.replace(",", ".");
-
-    checkValidation(formattedMeasure.value);
-
-    if (isNaN(parseInt(formattedMeasure.value)) === true){
-        resultMeasure.textContent = "Please, check out you have entered the correct data for the conversion";
-    } else if (isNaN(parseInt(formattedMeasure.value)) === false) {
+    if (isValidInput(convertibleMeasure.value)) {
+        const formattedInput = convertibleMeasure.value.replace(',', '.');
         switch(fromMeasurement.value) {
             // WEIGHT CASES
             case 'lb': {
                 if(toMeasurement.value === 'kg') {
-                    resultMeasure.textContent = lbToKilo(formattedMeasure.value);
+                    resultMeasure.textContent = lbToKilo(formattedInput);
                 } else if (toMeasurement.value === 't') {
-                    resultMeasure.textContent = lbToTon(formattedMeasure.value);
+                    resultMeasure.textContent = lbToTon(formattedInput);
                 }
                 break;
             }
             case 'kg': {
                 if(toMeasurement.value === 'lb') {
-                    resultMeasure.textContent = kgToPound(formattedMeasure.value);
+                    resultMeasure.textContent = kgToPound(formattedInput);
                 } else if (toMeasurement.value === 't') {
-                    resultMeasure.textContent = kgToTon(formattedMeasure.value);
+                    resultMeasure.textContent = kgToTon(formattedInput);
                 }
                 break;
             }
     
             case 't': {
                 if(toMeasurement.value === 'kg') {
-                    resultMeasure.textContent = tToKilo(formattedMeasure.value);
+                    resultMeasure.textContent = tToKilo(formattedInput);
                 } else if (toMeasurement.value === 'lb') {
-                    resultMeasure.textContent = tToPound(formattedMeasure.value);
+                    resultMeasure.textContent = tToPound(formattedInput);
                 }
                 break;
             }
@@ -83,27 +78,27 @@ convertButton.addEventListener("click", function convert(){
             // LENGTH CASES 
             case 'm': {
                 if(toMeasurement.value === 'ft') {
-                    resultMeasure.textContent = mToFeet(formattedMeasure.value);
+                    resultMeasure.textContent = mToFeet(formattedInput);
                 } else if (toMeasurement.value === 'yd') {
-                    resultMeasure.textContent = mToYard(formattedMeasure.value);
+                    resultMeasure.textContent = mToYard(formattedInput);
                 }
                 break;
             }
     
             case 'ft': {
                 if(toMeasurement.value === 'm') {
-                    resultMeasure.textContent = ftToMeter(formattedMeasure.value);
+                    resultMeasure.textContent = ftToMeter(formattedInput);
                 } else if (toMeasurement.value === 'yd') {
-                    resultMeasure.textContent = ftToYard(formattedMeasure.value);
+                    resultMeasure.textContent = ftToYard(formattedInput);
                 }
                 break;
             }
     
             case 'yd': {
                 if(toMeasurement.value === 'm') {
-                    resultMeasure.textContent = ydToMeter(formattedMeasure.value);
+                    resultMeasure.textContent = ydToMeter(formattedInput);
                 } else if (toMeasurement.value === 'ft') {
-                    resultMeasure.textContent = ydToFeet(formattedMeasure.value);
+                    resultMeasure.textContent = ydToFeet(formattedInput);
                 }
                 break;
             }
@@ -111,76 +106,37 @@ convertButton.addEventListener("click", function convert(){
             // TEMPERATURE CASES
             case 'ºC': {
                 if(toMeasurement.value === 'ºF') {
-                    resultMeasure.textContent = CToFahrenheit(formattedMeasure.value);
+                    resultMeasure.textContent = CToFahrenheit(formattedInput);
                 } else if (toMeasurement.value === 'ºK') {
-                    resultMeasure.textContent = CToKelvin(formattedMeasure.value);
+                    resultMeasure.textContent = CToKelvin(formattedInput);
                 }
                 break;
             }
     
             case 'ºF': {
                 if(toMeasurement.value === 'ºC') {
-                    resultMeasure.textContent = FToCelcius(formattedMeasure.value);
+                    resultMeasure.textContent = FToCelcius(formattedInput);
                 } else if (toMeasurement.value === 'ºK') {
-                    resultMeasure.textContent = FToKelvin(formattedMeasure.value);
+                    resultMeasure.textContent = FToKelvin(formattedInput);
                 }
                 break;
             }
     
             case 'ºK': {
                 if(toMeasurement.value === 'ºC') {
-                    resultMeasure.textContent = KToCelcius(formattedMeasure.value);
+                    resultMeasure.textContent = KToCelcius(formattedInput);
                 } else if (toMeasurement.value === 'ºF') {
-                    resultMeasure.textContent = KToFahrenheit(formattedMeasure.value);
+                    resultMeasure.textContent = KToFahrenheit(formattedInput);
                 }
                 break;
-            }
-    
-            //todo: complete the switch with all other units....
-    
+            }    
             default: {
                 console.log('Error happened....');
             }
         }
-    };
-
-
-
-    // if (inputMeasurement.textContent === "lb" && outputMeasurement.textContent === "kg"){
-    //     resultMeasure.textContent = parseInt(convertibleMeasure.value) * 0.4535;
-    // } else if (inputMeasurement.textContent === "lb" && outputMeasurement.textContent === "t"){
-    //     resultMeasure.textContent = parseInt(convertibleMeasure.value) * 0.0004;
-    // } else if (inputMeasurement.textContent === "kg" && outputMeasurement.textContent === "lb"){
-    //     resultMeasure.textContent = parseInt(convertibleMeasure.value) * 2.2046;
-    // } else if (inputMeasurement.textContent === "kg" && outputMeasurement.textContent === "t"){
-    //     resultMeasure.textContent = parseInt(convertibleMeasure.value) / 1000;
-    // } else if (inputMeasurement.textContent === "t" && outputMeasurement.textContent === "kg"){
-    //     resultMeasure.textContent = parseInt(convertibleMeasure.value) * 1000;
-    // } else if (inputMeasurement.textContent === "t" && outputMeasurement.textContent === "lb"){
-    //     resultMeasure.textContent = parseInt(convertibleMeasure.value) * 2204.6226;
-    // } else if (inputMeasurement.textContent === "m" && outputMeasurement.textContent === "ft"){
-    //     resultMeasure.textContent = parseInt(convertibleMeasure.value) * 3.2808;
-    // } else if (inputMeasurement.textContent === "m" && outputMeasurement.textContent === "yd"){
-    //     resultMeasure.textContent = parseInt(convertibleMeasure.value) * 1.0936;
-    // } else if (inputMeasurement.textContent === "ft" && outputMeasurement.textContent === "m"){
-    //     resultMeasure.textContent = parseInt(convertibleMeasure.value) * 0.3048;
-    // } else if (inputMeasurement.textContent === "ft" && outputMeasurement.textContent === "yd"){
-    //     resultMeasure.textContent = parseInt(convertibleMeasure.value) * 0.3333;
-    // } else if (inputMeasurement.textContent === "yd" && outputMeasurement.textContent === "m"){
-    //     resultMeasure.textContent = parseInt(convertibleMeasure.value) * 0.9144;
-    // } else if (inputMeasurement.textContent === "yd" && outputMeasurement.textContent === "ft"){
-    //     resultMeasure.textContent = parseInt(convertibleMeasure.value) * 3;
-    // } else if (inputMeasurement.textContent === "C" && outputMeasurement.textContent === "F"){
-    //     resultMeasure.textContent = (parseInt(convertibleMeasure.value) * 9 / 5) + 32 ;
-    // } else if (inputMeasurement.textContent === "C" && outputMeasurement.textContent === "K"){
-    //     resultMeasure.textContent = parseInt(convertibleMeasure.value) + 273.15;
-    // } else if (inputMeasurement.textContent === "F" && outputMeasurement.textContent === "C"){
-    //     resultMeasure.textContent = (parseInt(convertibleMeasure.value) - 32) * 5 / 9;
-    // } else if (inputMeasurement.textContent === "F" && outputMeasurement.textContent === "K"){
-    //     resultMeasure.textContent = (parseInt(convertibleMeasure.value) - 32) * 5 / 9 + 273.15;
-    // } else if (inputMeasurement.textContent === "K" && outputMeasurement.textContent === "C"){
-    //     resultMeasure.textContent = parseInt(convertibleMeasure.value) - 273.15;
-    // } else if (inputMeasurement.textContent === "K" && outputMeasurement.textContent === "F"){
-    //     resultMeasure.textContent = (parseInt(convertibleMeasure.value) - 273.15) * 9 / 5 + 32;
-    // }
+    } else {
+        // we handle the validation error
+        console.log('The input is not a valid number!');
+        resultMeasure.textContent = 'The input is not a valid number'
+    }
 })

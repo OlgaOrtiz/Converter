@@ -1,4 +1,4 @@
 export function checkValidation (inputValue){
-    
- isNaN(inputValue);
+    isNaN(parseFloat(inputValue)) === true;
+    isNaN(inputValue);
 }

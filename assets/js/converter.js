@@ -35,20 +35,30 @@ arrow.addEventListener("click", function changeMeasurements(){
 });
 
 // set the actual fromM and toM to new variables
+let actualFromM = fromMeasurement.options.selectedIndex;
+let actualToM = toMeasurement.options.selectedIndex;
 
 fromMeasurement.addEventListener("change", function changeInput(){
     // delete de disable attribute from the previus toM
+    toMeasurement[actualFromM].removeAttribute("disabled");
     // get index in select for the new fromM -- fromMeasurement.findIndex(fromMeasurement.value) ERROR
+    const selectedIndexFrom = fromMeasurement.options.selectedIndex;
     // set attribute "disabled" to the toM in the index from the new fromM -- toMeasurement[i].setAttribute ("disabled", "");
-    // inputMeasurement.textContent = fromMeasurement.value;
-    // update the current fromM to the actual variable outside the event
-    
+    toMeasurement[selectedIndexFrom].setAttribute("disabled", "");
+
 
     inputMeasurement.textContent = fromMeasurement.value;
+    actualFromM = fromMeasurement.options.selectedIndex;
 });
 
 toMeasurement.addEventListener("change", function changeOutput(){
+    fromMeasurement[actualToM].removeAttribute("disabled");
+    const selectedIndexTo = toMeasurement.options.selectedIndex;
+    fromMeasurement[selectedIndexTo].setAttribute("disabled", "");
+
+
     outputMeasurement.textContent = toMeasurement.value;
+    actualToM = toMeasurement.options.selectedIndex;
 });
 
 convertButton.addEventListener("click", function convert(){

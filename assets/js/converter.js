@@ -26,22 +26,47 @@ const tempMeasure = [];
 inputMeasurement.textContent = fromMeasurement.value;
 outputMeasurement.textContent = toMeasurement.value;
 
+// set the actual fromM and toM to new variables
+let actualFromM = fromMeasurement.options.selectedIndex;
+let actualToM = toMeasurement.options.selectedIndex;
 
 arrow.addEventListener("click", function changeMeasurements(){
+    toMeasurement[actualFromM].removeAttribute("disabled");
+    fromMeasurement[actualToM].removeAttribute("disabled");
+    toMeasurement[actualToM].setAttribute("disabled", "");
+    fromMeasurement[actualFromM].setAttribute("disabled", "");
+
     tempMeasure.value = fromMeasurement.value;
     fromMeasurement.value = toMeasurement.value;
     inputMeasurement.textContent = fromMeasurement.value;
     toMeasurement.value = tempMeasure.value;
     outputMeasurement.textContent = toMeasurement.value;
 
+    actualFromM = fromMeasurement.options.selectedIndex;
+    actualToM = toMeasurement.options.selectedIndex;
 });
 
 fromMeasurement.addEventListener("change", function changeInput(){
+    // delete de disable attribute from the previus toM
+    toMeasurement[actualFromM].removeAttribute("disabled");
+    // get index in select for the new fromM -- fromMeasurement.findIndex(fromMeasurement.value) ERROR
+    const selectedIndexFrom = fromMeasurement.options.selectedIndex;
+    // set attribute "disabled" to the toM in the index from the new fromM -- toMeasurement[i].setAttribute ("disabled", "");
+    toMeasurement[selectedIndexFrom].setAttribute("disabled", "");
+
+
     inputMeasurement.textContent = fromMeasurement.value;
+    actualFromM = fromMeasurement.options.selectedIndex;
 });
 
 toMeasurement.addEventListener("change", function changeOutput(){
+    fromMeasurement[actualToM].removeAttribute("disabled");
+    const selectedIndexTo = toMeasurement.options.selectedIndex;
+    fromMeasurement[selectedIndexTo].setAttribute("disabled", "");
+
+
     outputMeasurement.textContent = toMeasurement.value;
+    actualToM = toMeasurement.options.selectedIndex;
 });
 
 convertButton.addEventListener("click", function convert(){

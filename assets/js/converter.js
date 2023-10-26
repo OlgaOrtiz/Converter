@@ -24,19 +24,25 @@ const tempMeasure = [];
 inputMeasurement.textContent = fromMeasurement.value;
 outputMeasurement.textContent = toMeasurement.value;
 
+// set the actual fromM and toM to new variables
+let actualFromM = fromMeasurement.options.selectedIndex;
+let actualToM = toMeasurement.options.selectedIndex;
 
 arrow.addEventListener("click", function changeMeasurements(){
+    toMeasurement[actualFromM].removeAttribute("disabled");
+    fromMeasurement[actualToM].removeAttribute("disabled");
+    toMeasurement[actualToM].setAttribute("disabled", "");
+    fromMeasurement[actualFromM].setAttribute("disabled", "");
+
     tempMeasure.value = fromMeasurement.value;
     fromMeasurement.value = toMeasurement.value;
     inputMeasurement.textContent = fromMeasurement.value;
     toMeasurement.value = tempMeasure.value;
     outputMeasurement.textContent = toMeasurement.value;
 
+    actualFromM = fromMeasurement.options.selectedIndex;
+    actualToM = toMeasurement.options.selectedIndex;
 });
-
-// set the actual fromM and toM to new variables
-let actualFromM = fromMeasurement.options.selectedIndex;
-let actualToM = toMeasurement.options.selectedIndex;
 
 fromMeasurement.addEventListener("change", function changeInput(){
     // delete de disable attribute from the previus toM
@@ -62,6 +68,8 @@ toMeasurement.addEventListener("change", function changeOutput(){
 });
 
 convertButton.addEventListener("click", function convert(){
+    // change for a promise (resolve, reject) - .then .catch
+
     if (isNaN(parseInt(convertibleMeasure.value)) === true){
         resultMeasure.textContent = "Please, check out you have entered the correct data for the conversion";
     } else if (isNaN(parseInt(convertibleMeasure.value)) === false) {

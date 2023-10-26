@@ -3,21 +3,21 @@ export function lbToKilo (inputValue) {
 }
 
 export function lbToTon  (inputValue) {
-    return parseFloat(inputValuereplace(",", ".")) * 0.0004;
+    return parseFloat(inputValue.replace(",", ".")) * 0.0004;
 }
 
 export function kgToPound (inputValue) {
-    return parseFloat(inputValuereplace(",", ".")) * 2.2046;
+    return parseFloat(inputValue.replace(",", ".")) * 2.2046;
 }
 
 export function kgToTon (inputValue) {
-    return parseFloat(inputValuereplace(",", ".")) / 1000;
+    return parseFloat(inputValue.replace(",", ".")) / 1000;
 }
 
 export function tToKilo (inputValue) {
-    return parseFloat(inputValuereplace(",", ".")) * 1000;
+    return parseFloat(inputValue.replace(",", ".")) * 1000;
 }
 
 export function tToPound (inputValue) {
-    return parseFloat(inputValuereplace(",", ".")) * 2204.6226;
+    return parseFloat(inputValue.replace(",", ".")) * 2204.6226;
 }

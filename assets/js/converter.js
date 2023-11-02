@@ -2,6 +2,8 @@ import { lbToKilo, lbToTon, kgToPound, kgToTon, tToKilo, tToPound } from './weig
 import { mToFeet, mToYard, ftToMeter, ftToYard, ydToMeter, ydToFeet } from './lengthConverter.js';
 import { CToFahrenheit, CToKelvin, FToCelcius, FToKelvin, KToCelcius, KToFahrenheit } from './temperatureConverter.js';
 import { isValidInput } from './validation.js';
+import { getCurrenciesFromEuro } from './request.js';
+import { euroToDollar, euroToPound } from './currencyConverter.js'; 
 
 
 const convertibleMeasure = document.querySelector("#convertible");
@@ -21,6 +23,11 @@ const resultMeasure = document.querySelector("#result");
 const outputMeasurement = document.querySelector("#output");
 // this is the temporary element for the arrow change
 const tempMeasure = [];
+let euroCurrencyRates;
+(async function () {
+    euroCurrencyRates = await getCurrenciesFromEuro();
+    console.log('I am in the loading function of the page!', euroCurrencyRates);
+})();
 
 // this is default value for the input and output measurements
 inputMeasurement.textContent = fromMeasurement.value;
@@ -154,6 +161,15 @@ convertButton.addEventListener("click", function convert(){
                     resultMeasure.textContent = KToFahrenheit(formattedInput);
                 }
                 break;
+            }
+            case 'euro': {
+                if(toMeasurement.value === 'dollar') {
+                    console.log('I am in the switch!', euroCurrencyRates);
+                    debugger
+                    resultMeasure.textContent = euroToDollar(formattedInput, euroCurrencyRates.dollar);
+                } else if (toMeasurement.value === 'pound') {
+                    resultMeasure.textContent = euroToPound(formattedInput, euroCurrencyRates.pound);
+                }
             }    
             default: {
                 console.log('Error happened....');

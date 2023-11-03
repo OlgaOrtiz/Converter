@@ -182,6 +182,7 @@ convertButton.addEventListener("click", function convert(){
                 } else if (toMeasurement.value === '£') {
                     resultMeasure.textContent = euroToPound(formattedInput, euroCurrencyRates.pound);
                 }
+                break;
             }
 
             case '$': {
@@ -190,6 +191,7 @@ convertButton.addEventListener("click", function convert(){
                 } else if (toMeasurement.value === '£') {
                     resultMeasure.textContent = dollarToPound(formattedInput, dollarCurrencyRates.pound);
                 }
+                break;
             }
 
             case '£': {
@@ -198,6 +200,7 @@ convertButton.addEventListener("click", function convert(){
                 } else if (toMeasurement.value === '$') {
                     resultMeasure.textContent = poundToDollar(formattedInput, poundCurrencyRates.dollar);
                 }
+                break;
             }
 
             default: {

@@ -4,22 +4,28 @@
 <meta charset="utf-8">
 <title>Converter</title>
 <link href="assets/css/general.css" rel="stylesheet" type="text/css">
+<link href="assets/css/converter.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
+    <div id="logo">
+		<img src="assets/img/NMC_Logo.png" alt="Neko's Magic Converter">
+    </div>
    <main>
-        <h1>OLGA'S CONVERTER</h1>
+        <h1 class="page-title">Weight Converter</h1>
         <div id="converter">
-            <div class="bg">
-                <div class="flex line-dark">
+            <div class="flex line">
                     <input type="text" id="convertible">
                     <p id="input"></p>
-                </div>
             </div>
-            <div class="bg-transparent flex">
-                <div>
-                    <p>FROM</p>
+            <div class="margin">
+                <div class="flex align-left">
+                    <p class="margin-top-none margin-bottom-none width">from</p>
+                    <p class="margin-top-none margin-bottom-none width">to</p>
+                </div>               
+                <div class="flex">
                     <div class="bg-selector">
                         <select name="measures" class="selector pointer" id="from">
                             <option class="value" value="lb" selected>lb</option>
@@ -27,10 +33,11 @@
                             <option class="value" value="t">t</option>
                           </select>
                     </div>
-                </div>
-                <div><img id="arrow" class="pointer" src="assets/img/Arrow.png"></div>
-                <div>
-                    <p>TO</p>
+
+                    <svg id="arrow" class="pointer" data-name="Arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 111.54 111.54">
+                        <path class="cls-1" d="M90.79,55.78c0,.9-1.09,2.29-1.77,2.96-4.12,4.17-8.27,8.3-12.42,12.44-1.28,1.28-3.01,1.4-4.23,.33-1.34-1.18-1.38-3.09-.06-4.42,2.55-2.57,5.12-5.13,7.69-7.69,.17-.17,.33-.35,.57-.6H30.98c.23,.25,.39,.43,.56,.6,2.56,2.56,5.14,5.12,7.68,7.69,1.66,1.68,1.06,4.34-1.13,5.01-1.17,.35-2.2,.06-3.07-.82-1.62-1.63-3.25-3.26-4.88-4.89-2.56-2.56-5.15-5.11-7.68-7.7-.65-.67-1.72-2.08-1.72-2.92,0-.46,0,.46,0,0,0-1.18,1.03-2.23,1.67-2.88,4.17-4.21,8.37-8.4,12.56-12.58,1.22-1.22,2.92-1.34,4.13-.33,1.38,1.16,1.45,3.12,.12,4.47-2.55,2.57-5.12,5.13-7.68,7.69-.17,.17-.33,.35-.56,.6h49.59c-.24-.25-.4-.43-.57-.6-2.56-2.56-5.14-5.12-7.68-7.69-1.66-1.68-1.06-4.34,1.13-5.01,1.17-.35,2.2-.05,3.07,.82,1.35,1.36,2.71,2.71,4.06,4.06,2.82,2.82,5.66,5.63,8.45,8.48,.67,.68,1.77,1.91,1.77,2.98h0Z"/>
+                    </svg>
+                    
                     <div class="bg-selector">
                         <select name="measures" class="selector pointer" id="to">
                             <option class="value" value="lb" disabled>lb</option>
@@ -40,15 +47,21 @@
                     </div>
                 </div>
             </div>
-            <div id="button" class="pointer">
-                <p class="button">CONVERT</p>
+            <div id="button" class="pointer margin">
+                <p class="button">convert</p>
             </div>
-            <div class="flex line-light">
-                <p id="result"></p>
+            <div id="final-result" class="flex margin align-right">
+                <p id="result" class="margin-top-none"></p>
                 <p id="output"></p>
             </div>
         </div>
-   </main>
+    </main>
+    <footer>
+        <div class="horizontal-menu">
+            
+        </div>
+        <p class="singular-page">Made with <i class="fa fa-heart"></i> by Olga Ortiz</p>
+    </footer>   
    <script type="module" src="assets/js/converter.js"></script>
 </body>
 </html>

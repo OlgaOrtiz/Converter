@@ -1,5 +1,5 @@
-const weigth = document.querySelector("#weigth");
-weigth.addEventListener("click", openWeigth);
+const weight = document.querySelector("#weight");
+weight.addEventListener("click", openWeigth);
 const length = document.querySelector("#length");
 length.addEventListener("click", openLength);
 const coin = document.querySelector("#coin");
@@ -9,6 +9,7 @@ temperature.addEventListener("click", openTemperature);
 
 
 function openWeigth (){
+    debugger
     window.location.href = "./weight_converter.html";
 }
 

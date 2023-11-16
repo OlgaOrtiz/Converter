@@ -1,0 +1,11 @@
+{
+  "euro": {},
+  "dollar": {
+    "euro": 0.94,
+    "pound": 0.82
+  },
+  "pound": {
+    "euro": 1.14,
+    "pound": 1.22
+  }
+}

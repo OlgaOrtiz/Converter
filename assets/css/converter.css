@@ -1,0 +1,155 @@
+@charset "UTF-8";
+:root{
+    --main-yellow: #FBD574;
+    --main-purple: #D2B8E7;
+    --main-blue: #C1C7DD;
+    --main-green: #A8DFCC;
+    --dark-yellow: #FAC748;
+    --dark-purple: #803EB6;
+    --dark-blue: #57669E;
+    --dark-green: #3DA480;
+    --background-a: #3B252C;
+    --background-b: #36453B;
+    --my-gradient: conic-gradient(#D2B8E7, #FBD574, #A8DFCC, #D2B8E7);
+    --my-gradient-dark: conic-gradient(#803EB6, #FAC748, #3DA480, #803EB6);
+}
+
+
+.page-title{
+    font-family: 'VintageStylist';
+}
+
+#converter{
+    padding: 7%;
+    width: 300px;
+    max-width: 395px;
+    height: 300px;
+    max-height: 395px;
+    margin: auto;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.line{
+    width: 80%;
+    margin: auto;
+    height: 40px;
+    border-bottom: var(--background-a) solid 1.5px;
+}
+
+.margin{
+    margin-top: 10%;
+}
+
+.margin-top-none{
+    margin-top: 0;
+}
+
+.margin-bottom-none{
+    margin-bottom: 0;
+}
+
+.width{
+    width: 75px;
+}
+
+.align-left{
+    text-align: left;
+}
+
+#convertible{
+    border: none;
+    background: none;
+    height: 35px;
+}
+
+.bg-selector{
+    min-height: 45px;
+    width: 75px;
+    min-width: 45px;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.5) ;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.selector{
+    width: 75px;
+    min-width: 45px;
+    padding: 3px;
+    border: none;
+    font-family: 'Raleway', sans-serif;
+    background-color: rgba(255, 255, 255, 0);
+    color: var(--background-a);
+}
+
+.pointer:hover{
+    cursor: pointer;
+}
+
+#arrow{
+    width: 18%;
+    fill: var(--background-a);
+}
+
+#button{
+    width: 150px;
+    height: 45px;
+    margin-left: auto;
+    margin-right: auto;
+    border: rgba(255, 255, 255, 0.5) solid 1px;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    color: var(--background-a);
+    font-family: 'VintageStylist';
+}
+
+#button:hover{
+    background: var(--my-gradient);
+    color: white;
+}
+
+.button{    
+    margin-top: 10px;
+}
+
+.align-right{
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#result{
+    min-width: 20px;
+    height: 20px;
+    font-weight: 300;
+    font-size: 2.5em;
+}
+
+#output{
+    height: 20px;
+    margin-left: 2%;
+}
+
+footer{
+    width: 70%;
+    max-width: 395px;
+    height: 150px;
+    max-height: 395px;
+    font-size: 0.8rem;
+    background-color: var(--background-a);
+    margin: auto;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.singular-page{
+    background: var(--my-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

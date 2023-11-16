@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+:root{
+    --main-yellow: #FBD574;
+    --main-purple: #D2B8E7;
+    --main-blue: #C1C7DD;
+    --main-green: #A8DFCC;
+    --dark-yellow: #FAC748;
+    --dark-purple: #803EB6;
+    --dark-blue: #57669E;
+    --dark-green: #3DA480;
+    --background-a: #3B252C;
+    --background-b: #36453B;
+}
+
+#menu{
+    background-color: var(--background-a);
+    border-radius: 15%;
+    width: 300px;
+    max-width: 395px;
+    height: 300px;
+    max-height: 395px;
+    margin: auto;
+    padding: 7%;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    display: flex;
+    justify-content: center;
+    align-content: flex-start;
+}
+
+.main-menu-row{
+    margin: 5%;
+    width: 120px;
+}
+
+
+.main-menu-row svg{
+    cursor: pointer;
+}
+
+#temperature{
+    height: 129px;
+    max-height: 169px;
+    max-width: 100px;
+}
+
+.margin-right{
+
+}
+
+footer{
+    font-size: 0.8rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}

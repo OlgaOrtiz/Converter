@@ -17,21 +17,30 @@
 
 .page-title{
     font-family: 'VintageStylist';
+    height: 5.5vh;
+    margin-top: 0vh;
+    margin-bottom: 3vh;
 }
 
 #converter{
-    padding: 7%;
     width: 300px;
     max-width: 395px;
-    height: 300px;
-    max-height: 395px;
+    height: 40.5vh;
     margin: auto;
+    align-content: center;
 }
 
 .flex{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    align-content: baseline;
+}
+
+.flex-bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
 }
 
 .line{
@@ -42,7 +51,7 @@
 }
 
 .margin{
-    margin-top: 10%;
+    margin-top: 15%;
 }
 
 .margin-top-none{
@@ -62,9 +71,19 @@
 }
 
 #convertible{
+    width: 89%;
     border: none;
     background: none;
     height: 35px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.5em;
+    font-weight: 700;
+    text-align: right;
+    color: var(--background-a);
+}
+
+#convertible:focus-visible{
+    outline: none;
 }
 
 .bg-selector{
@@ -137,19 +156,46 @@
 }
 
 footer{
-    width: 70%;
-    max-width: 395px;
-    height: 150px;
-    max-height: 395px;
+    width: 40%;
+    height: 27vh;
     font-size: 0.8rem;
     background-color: var(--background-a);
     margin: auto;
+    margin-top: 5vh;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
+}
+
+.horizontal-menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7%;
+    padding: 4.54%;
+    padding-bottom: 3%;
+}
+
+#weight{
+    width: 152px;
+}
+
+#length{
+    width: 120px;
+}
+
+#temperature{
+    width: 104px;
+}
+
+#coin{
+    width: 124px;
 }
 
 .singular-page{
     background: var(--my-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    background-color: var(--background-a);
+    padding-bottom: 2%;
+    margin-bottom: 0px;
 }

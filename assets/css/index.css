@@ -13,43 +13,57 @@
     --background-b: #36453B;
 }
 
+#logo{
+    margin-bottom: 0vh;
+}
+
+main{
+    height: 81vh;
+    display: flex;
+    justify-content: center;
+    align-content: space-between;
+}
+
 #menu{
     background-color: var(--background-a);
     border-radius: 15%;
-    width: 300px;
-    max-width: 395px;
-    height: 300px;
-    max-height: 395px;
+    width: 500px;
+    max-width: 600px;
+    height: 500px;
+    max-height: 600px;
     margin: auto;
-    padding: 7%;
     margin-top: 5vh;
     margin-bottom: 5vh;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-content: flex-start;
+    align-items: center;
+    align-content: center;
+    gap: 7%;
 }
 
-.main-menu-row{
-    margin: 5%;
-    width: 120px;
+#weight{
+    width: 190px;
+    max-width: 228px;
 }
 
-
-.main-menu-row svg{
-    cursor: pointer;
+#length{
+    width: 150px;
+    max-width: 180px;
 }
 
 #temperature{
-    height: 129px;
-    max-height: 169px;
-    max-width: 100px;
+    width: 130px;
+    max-width: 156px;
 }
 
-.margin-right{
-
+#coin{
+    width: 155px;
+    max-width: 186px;
 }
 
 footer{
+    height: 5vh;
     font-size: 0.8rem;
     display: flex;
     align-items: flex-end;

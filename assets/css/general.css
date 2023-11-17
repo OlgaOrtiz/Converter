@@ -49,10 +49,15 @@ main{
     background-color: var(--background-a);
     margin-top: 3vh;
     margin-bottom: 5vh;
+    cursor: pointer;
 }
 
 #logo img{
     height: 100%;
+}
+
+.cat-hover{
+  cursor: pointer;
 }
 
 .cat-linear-face, .cat-linear {
@@ -70,18 +75,18 @@ main{
     fill: white;
   }
 
-  .main-menu-row:hover .cat-interior{
+  .cat-hover:hover .cat-interior{
     fill: url(#my-gradient);
   }
 
-  .main-menu-row:hover .cat-linear{
+  .cat-hover:hover .cat-linear{
     stroke: white;
   }
 
-  .main-menu-row:hover .cat-linear-face{
+  .cat-hover:hover .cat-linear-face{
     stroke: white;
   }
 
-  .main-menu-row:hover .cat-magic{
+  .cat-hover:hover .cat-magic{
     stroke: white;
   }

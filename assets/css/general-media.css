@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+/* Mobile devices */
+@media (max-width: 480px){
+    #logo{
+        width: 100%;
+        margin-top: 0vh;
+    }
+
+    main{
+        width: 100%;
+    }
+    
+    footer{
+        width: 100%;
+        height: auto;
+        border-radius: 0%;
+        margin-top: 7vh;
+    }
+}
+
+/* Tablet devices */
+@media (min-width: 481px) and (max-width: 768px){
+    #logo{
+        width: 100%;
+        margin-top: 0vh;
+    }
+
+    main{
+        width: 80%;
+    }
+    
+    #converter{
+        width: 60%;
+    }
+    
+    footer{
+        width: 100%;
+        height: auto;
+        border-radius: 0%;
+        margin-top: 7vh;
+    }
+    
+}

@@ -14,9 +14,19 @@
     --my-gradient-dark: conic-gradient(#803EB6, #FAC748, #3DA480, #803EB6);
 }
 
+main{
+    height: 61vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+}
 
 .page-title{
     font-family: 'VintageStylist';
+    font-size: 1.8em;
     height: 5.5vh;
     margin-top: 0vh;
     margin-bottom: 3vh;
@@ -25,9 +35,9 @@
 #converter{
     width: 300px;
     max-width: 395px;
-    height: 40.5vh;
+    min-height: 40.5vh;
+    max-height: 50.5vh;
     margin: auto;
-    align-content: center;
 }
 
 .flex{
@@ -156,8 +166,8 @@
 }
 
 footer{
-    width: 40%;
-    height: 27vh;
+    width: 450px;
+    height: auto;
     font-size: 0.8rem;
     background-color: var(--background-a);
     margin: auto;
@@ -176,19 +186,19 @@ footer{
 }
 
 #weight{
-    width: 152px;
+    width: 76px;
 }
 
 #length{
-    width: 120px;
+    width: 60px;
 }
 
 #temperature{
-    width: 104px;
+    width: 52px;
 }
 
 #coin{
-    width: 124px;
+    width: 62px;
 }
 
 .singular-page{

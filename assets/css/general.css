@@ -49,11 +49,11 @@ main{
     background-color: var(--background-a);
     margin-top: 3vh;
     margin-bottom: 5vh;
-    cursor: pointer;
 }
 
 #logo img{
     height: 100%;
+    cursor: pointer;
 }
 
 .cat-hover{
@@ -61,32 +61,48 @@ main{
 }
 
 .cat-linear-face, .cat-linear {
-    fill: none;
-    stroke: url(#my-gradient);
-    stroke-linecap: round;
-    stroke-linejoin: round;
-  }
+  fill: none;
+  stroke: url(#my-gradient);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
 
-  .cat-linear {
-    stroke-width: 2px;
-  }
+.cat-linear {
+  stroke-width: 2px;
+}
 
-  .cat-interior, .cat-magic {
-    fill: white;
-  }
+.cat-interior, .cat-magic {
+  fill: white;
+}
 
-  .cat-hover:hover .cat-interior{
-    fill: url(#my-gradient);
-  }
+.cat-hover:hover .cat-interior{
+  fill: url(#my-gradient);
+}
 
-  .cat-hover:hover .cat-linear{
-    stroke: white;
-  }
+.cat-hover:hover .cat-linear{
+  stroke: white;
+}
 
-  .cat-hover:hover .cat-linear-face{
-    stroke: white;
-  }
+.cat-hover:hover .cat-linear-face{
+  stroke: white;
+}
 
-  .cat-hover:hover .cat-magic{
-    stroke: white;
-  }
+.cat-hover:hover .cat-magic{
+  stroke: white;
+}
+
+.cat-selected .cat-interior{
+  fill: url(#my-gradient);
+}
+
+.cat-selected .cat-linear{
+  stroke: white;
+}
+
+.cat-selected .cat-linear-face{
+  stroke: white;
+}
+
+.cat-selected .cat-magic{
+  stroke: white;
+}

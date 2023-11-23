@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+/* Mobile devices */
+@media (max-width: 480px){
+    main{
+        height: 64vh;
+    }
+
+    #weight{
+        width: 56px;
+    }
+    
+    #length{
+        width: 46px;
+    }
+    
+    #temperature{
+        width: 40px;
+    }
+    
+    #coin{
+        width: 46px;
+    }
+}
+
+/* Tablet devices */
+@media (min-width: 481px) and (max-width: 768px){
+    main{
+        height: 59vh;
+    }
+
+    footer{
+        height: 18vh;
+    }
+    
+}

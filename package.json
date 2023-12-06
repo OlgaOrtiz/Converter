@@ -4,7 +4,9 @@
   "description": "This is a learning orientated project where I have unified my knowledge of HTML, CSS and Javascript into one single simple web application.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "repository": {
     "type": "git",
@@ -18,5 +20,8 @@
   "homepage": "https://github.com/OlgaOrtiz/Converter#readme",
   "dependencies": {
     "animate.css": "^4.1.1"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
   }
 }

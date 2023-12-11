@@ -1,0 +1,71 @@
+@charset "UTF-8";
+
+:root{
+    --main-yellow: #FBD574;
+    --main-purple: #D2B8E7;
+    --main-blue: #C1C7DD;
+    --main-green: #A8DFCC;
+    --dark-yellow: #FAC748;
+    --dark-purple: #803EB6;
+    --dark-blue: #57669E;
+    --dark-green: #3DA480;
+    --background-a: #3B252C;
+    --background-b: #36453B;
+}
+
+#logo{
+    margin-bottom: 0vh;
+}
+
+main{
+    height: 81vh;
+    display: flex;
+    justify-content: center;
+    align-content: space-between;
+}
+
+#menu{
+    background-color: var(--background-a);
+    border-radius: 15%;
+    width: 500px;
+    max-width: 600px;
+    height: 500px;
+    max-height: 600px;
+    margin: auto;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 7%;
+}
+
+#weight{
+    width: 190px;
+    max-width: 228px;
+}
+
+#length{
+    width: 150px;
+    max-width: 180px;
+}
+
+#temperature{
+    width: 130px;
+    max-width: 156px;
+}
+
+#coin{
+    width: 155px;
+    max-width: 186px;
+}
+
+footer{
+    height: 5vh;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}

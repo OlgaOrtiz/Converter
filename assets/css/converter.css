@@ -1,0 +1,211 @@
+@charset "UTF-8";
+:root{
+    --main-yellow: #FBD574;
+    --main-purple: #D2B8E7;
+    --main-blue: #C1C7DD;
+    --main-green: #A8DFCC;
+    --dark-yellow: #FAC748;
+    --dark-purple: #803EB6;
+    --dark-blue: #57669E;
+    --dark-green: #3DA480;
+    --background-a: #3B252C;
+    --background-b: #36453B;
+    --my-gradient: conic-gradient(#D2B8E7, #FBD574, #A8DFCC, #D2B8E7);
+    --my-gradient-dark: conic-gradient(#803EB6, #FAC748, #3DA480, #803EB6);
+}
+
+main{
+    height: 61vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+}
+
+.page-title{
+    font-family: 'VintageStylist';
+    font-size: 1.8em;
+    height: 5.5vh;
+    margin-top: 0vh;
+    margin-bottom: 3vh;
+}
+
+#converter{
+    width: 300px;
+    max-width: 395px;
+    min-height: 40.5vh;
+    max-height: 50.5vh;
+    margin: auto;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: baseline;
+}
+
+.flex-bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.line{
+    width: 80%;
+    margin: auto;
+    height: 40px;
+    border-bottom: var(--background-a) solid 1.5px;
+}
+
+.margin{
+    margin-top: 15%;
+}
+
+.margin-top-none{
+    margin-top: 0;
+}
+
+.margin-bottom-none{
+    margin-bottom: 0;
+}
+
+.width{
+    width: 75px;
+}
+
+.align-left{
+    text-align: left;
+}
+
+#convertible{
+    width: 89%;
+    border: none;
+    background: none;
+    height: 35px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.5em;
+    font-weight: 700;
+    text-align: right;
+    color: var(--background-a);
+}
+
+#convertible:focus-visible{
+    outline: none;
+}
+
+.bg-selector{
+    min-height: 45px;
+    width: 75px;
+    min-width: 45px;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.5) ;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.selector{
+    width: 75px;
+    min-width: 45px;
+    padding: 3px;
+    border: none;
+    font-family: 'Raleway', sans-serif;
+    background-color: rgba(255, 255, 255, 0);
+    color: var(--background-a);
+}
+
+.pointer:hover{
+    cursor: pointer;
+}
+
+#arrow{
+    width: 18%;
+    fill: var(--background-a);
+}
+
+#button{
+    width: 150px;
+    height: 45px;
+    margin-left: auto;
+    margin-right: auto;
+    border: rgba(255, 255, 255, 0.5) solid 1px;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    color: var(--background-a);
+    font-family: 'VintageStylist';
+}
+
+#button:hover{
+    background: var(--my-gradient);
+    color: white;
+}
+
+.button{    
+    margin-top: 10px;
+}
+
+.align-right{
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#result{
+    min-width: 20px;
+    height: 20px;
+    font-weight: 300;
+    font-size: 2.5em;
+}
+
+#output{
+    height: 20px;
+    margin-left: 2%;
+}
+
+footer{
+    width: 450px;
+    height: auto;
+    font-size: 0.8rem;
+    background-color: var(--background-a);
+    margin: auto;
+    margin-top: 5vh;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.horizontal-menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7%;
+    padding: 4.54%;
+    padding-bottom: 3%;
+}
+
+#weight{
+    width: 76px;
+}
+
+#length{
+    width: 60px;
+}
+
+#temperature{
+    width: 52px;
+}
+
+#coin{
+    width: 62px;
+}
+
+.singular-page{
+    background: var(--my-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-color: var(--background-a);
+    padding-bottom: 2%;
+    margin-bottom: 0px;
+}

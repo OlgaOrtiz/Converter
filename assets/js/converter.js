@@ -1,9 +1,9 @@
 import { lbToKilo, lbToTon, kgToPound, kgToTon, tToKilo, tToPound } from './weightConverter.js';
 import { mToFeet, mToYard, ftToMeter, ftToYard, ydToMeter, ydToFeet } from './lengthConverter.js';
 import { CToFahrenheit, CToKelvin, FToCelcius, FToKelvin, KToCelcius, KToFahrenheit } from './temperatureConverter.js';
+import { euroToDollar, euroToPound, dollarToEuro, dollarToPound, poundToEuro, poundToDollar } from './currencyConverter.js'; 
 import { isValidInput } from './validation.js';
-import { getCurrenciesFromEuro } from './request.js';
-import { euroToDollar, euroToPound } from './currencyConverter.js'; 
+import { getCurrenciesFromEuro, getCurrenciesFromDollar, getCurrenciesFromPound } from './request.js';
 
 
 const convertibleMeasure = document.querySelector("#convertible");
@@ -23,11 +23,23 @@ const resultMeasure = document.querySelector("#result");
 const outputMeasurement = document.querySelector("#output");
 // this is the temporary element for the arrow change
 const tempMeasure = [];
+
+// this will get the rates for the convertion of currency
 let euroCurrencyRates;
 (async function () {
     euroCurrencyRates = await getCurrenciesFromEuro();
-    console.log('I am in the loading function of the page!', euroCurrencyRates);
 })();
+
+let dollarCurrencyRates;
+(async function () {
+    dollarCurrencyRates = await getCurrenciesFromDollar();
+})();
+
+let poundCurrencyRates;
+(async function () {
+    poundCurrencyRates = await getCurrenciesFromPound();
+})();
+
 
 // this is default value for the input and output measurements
 inputMeasurement.textContent = fromMeasurement.value;
@@ -162,15 +174,35 @@ convertButton.addEventListener("click", function convert(){
                 }
                 break;
             }
-            case 'euro': {
-                if(toMeasurement.value === 'dollar') {
-                    console.log('I am in the switch!', euroCurrencyRates);
-                    debugger
+
+            // CURRENCY CASES
+            case '€': {
+                if(toMeasurement.value === '$') {
                     resultMeasure.textContent = euroToDollar(formattedInput, euroCurrencyRates.dollar);
-                } else if (toMeasurement.value === 'pound') {
+                } else if (toMeasurement.value === '£') {
                     resultMeasure.textContent = euroToPound(formattedInput, euroCurrencyRates.pound);
                 }
-            }    
+                break;
+            }
+
+            case '$': {
+                if(toMeasurement.value === '€') {
+                    resultMeasure.textContent = dollarToEuro(formattedInput, dollarCurrencyRates.euro);
+                } else if (toMeasurement.value === '£') {
+                    resultMeasure.textContent = dollarToPound(formattedInput, dollarCurrencyRates.pound);
+                }
+                break;
+            }
+
+            case '£': {
+                if(toMeasurement.value === '€') {
+                    resultMeasure.textContent = poundToEuro(formattedInput, poundCurrencyRates.euro);
+                } else if (toMeasurement.value === '$') {
+                    resultMeasure.textContent = poundToDollar(formattedInput, poundCurrencyRates.dollar);
+                }
+                break;
+            }
+
             default: {
                 console.log('Error happened....');
             }

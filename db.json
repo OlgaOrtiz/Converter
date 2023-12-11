@@ -1,14 +1,11 @@
 {
-    "euro": {
-        "dollar":1.07,
-        "pound":0.87
-    },
-    "dollar": {
-        "euro":0.94,
-        "pound":0.82
-    },
-    "pound": {
-        "euro":1.14,
-        "pound":1.22
-    }
+  "euro": {},
+  "dollar": {
+    "euro": 0.94,
+    "pound": 0.82
+  },
+  "pound": {
+    "euro": 1.14,
+    "pound": 1.22
+  }
 }

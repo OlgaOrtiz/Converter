@@ -32,5 +32,24 @@
     footer{
         height: 18vh;
     }
-    
+}
+
+/* Bigger Screens */
+@media (min-height: 868px){
+    main{
+        height: 60.6vh;
+    }
+}
+
+/* Smaller Screens */
+@media (max-height: 600px){
+    #logo{
+        height: %;
+        margin-top: %;
+        margin-bottom: %;
+    }
+
+    main{
+        height: 48vh;
+    }
 }

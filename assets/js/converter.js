@@ -91,6 +91,7 @@ toMeasurement.addEventListener("change", function changeOutput(){
 convertButton.addEventListener("click", function convert(){
     if (isValidInput(convertibleMeasure.value)) {
         const formattedInput = convertibleMeasure.value.replace(',', '.');
+        resultMeasure.classList.remove("invalid");
         switch(fromMeasurement.value) {
             // WEIGHT CASES
             case 'lb': {
@@ -210,6 +211,7 @@ convertButton.addEventListener("click", function convert(){
     } else {
         // we handle the validation error
         console.log('The input is not a valid number!');
+        resultMeasure.classList.add("invalid");
         resultMeasure.textContent = 'The input is not a valid number'
     }
 })

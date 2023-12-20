@@ -209,3 +209,8 @@ footer{
     padding-bottom: 2%;
     margin-bottom: 0px;
 }
+
+.invalid{
+    font-size: 0.9em !important;
+    font-weight: 600 !important;
+}

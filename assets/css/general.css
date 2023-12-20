@@ -20,6 +20,8 @@
     --dark-green: #3DA480;
     --background-a: #3B252C;
     --background-b: #36453B;
+    --my-gradient: conic-gradient(#D2B8E7, #FBD574, #A8DFCC, #D2B8E7);
+    --my-gradient-dark: conic-gradient(#803EB6, #FAC748, #3DA480, #803EB6);
 }
 
 body{
@@ -54,6 +56,24 @@ main{
 #logo img{
     height: 100%;
     cursor: pointer;
+}
+
+.title{
+  font-family: 'VintageStylist';
+  font-size: 1.2em;
+  margin-top: 2vh;
+  background-color: white;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.cat-hover:hover .title{
+  background-image: var(--my-gradient);
+}
+
+svg{
+  width: 82%;
 }
 
 .cat-hover{

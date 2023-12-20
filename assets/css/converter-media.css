@@ -7,19 +7,25 @@
     }
 
     #weight{
-        width: 56px;
+        max-width: 56px;
     }
     
     #length{
-        width: 46px;
+        max-width: 46px;
     }
     
     #temperature{
-        width: 40px;
+        max-width: 40px;
     }
     
     #coin{
-        width: 46px;
+        max-width: 46px;
+    }
+
+    footer{
+        max-width: 100%;
+        border-top-left-radius: 0px;
+        border-top-right-radius: none;
     }
 }
 

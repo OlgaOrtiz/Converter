@@ -4,6 +4,7 @@
 @media (max-width: 480px){
     main{
         height: 64vh;
+        width: 85%;
     }
 
     #weight{
@@ -25,7 +26,7 @@
     footer{
         max-width: 100%;
         border-top-left-radius: 0px;
-        border-top-right-radius: none;
+        border-top-right-radius: 0px;
     }
 }
 

@@ -90,7 +90,7 @@ toMeasurement.addEventListener("change", function changeOutput(){
 
 convertButton.addEventListener("click", function convert(){
     if (isValidInput(convertibleMeasure.value)) {
-        const formattedInput = convertibleMeasure.value.replace(',', '.');
+        const formattedInput = convertibleMeasure.value.replace(',', '.'); 
         switch(fromMeasurement.value) {
             // WEIGHT CASES
             case 'lb': {

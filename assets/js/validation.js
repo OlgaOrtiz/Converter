@@ -6,12 +6,11 @@
 // 4. if it's not return false
 export function isValidInput (inputValue) {
     const formattedInput = inputValue.replace(',', '.');
-    // if (isNaN(formattedInput)) {
-    //     return false;
-    // } else {
-    //     return true;
-    // }
 
-    //better
-    return !isNaN(formattedInput);
+    // return !isNaN(formattedInput);
+
+    if (!isNaN(formattedInput) && formattedInput.length !== 0){
+        return true;
+    }
+    return false;
 }

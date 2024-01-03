@@ -6,6 +6,7 @@
         height: 84vh;
     }
     #menu{
+        font-size: 0.75em;
         background-color: rgba(0, 0, 0, 0);
         width: auto;
         height: auto;
@@ -15,57 +16,57 @@
         justify-content: center;
         align-items: center;
         align-content: center;
-        gap: 7%;
+        gap: 4%;
     }
 
     #weight{
         background-color: var(--background-a);
-        width: 150px;
-        height: 150px;
+        width: 100px;
+        height: 100px;
         border-radius: 15%;
         padding: 5%;
     }
 
     #weight svg{
-        width: 129px;
+        width: 84px;
     }
     
     #length{
         background-color: var(--background-a);
-        width: 150px;
-        height: 150px;
+        width: 100px;
+        height: 100px;
         border-radius: 15%;
         padding: 5%;
     }
 
     #length svg{
-        height: 100px;
+        height: 63px;
     }
     
     #temperature{
         background-color: var(--background-a);
-        width: 150px;
-        height: 150px;
+        width: 100px;
+        height: 100px;
         border-radius: 15%;
         padding: 5%;
-        margin-top: 7%;
+        margin-top: 4%;
     }
 
     #temperature svg{
-        width: 90px;
+        width: 53px;
     }
     
     #coin{
         background-color: var(--background-a);
-        width: 150px;
-        height: 150px;
+        width: 100px;
+        height: 100px;
         border-radius: 15%;
         padding: 5%;
-        margin-top: 7%;
+        margin-top: 4%;
     }
 
     #coin svg{
-        height: 105px;
+        height: 63px;
     }
 
     footer{

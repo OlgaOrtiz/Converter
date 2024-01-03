@@ -21,7 +21,8 @@ main{
     align-content: center;
     align-items: center;
     justify-content: center;
-    width: 400px;
+    width: 50%;
+    max-width: 400px;
 }
 
 .page-title{
@@ -33,7 +34,7 @@ main{
 }
 
 #converter{
-    width: 300px;
+    width: 70%;
     max-width: 395px;
     min-height: 40.5vh;
     max-height: 50.5vh;
